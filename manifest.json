@@ -1,0 +1,20 @@
+{
+    "name": "Status entrega",
+    "short_name": "Status entrega",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f2eff0",
+    "theme_color": "#f2eff0",
+    "icons": [
+        {
+            "src": "path/para/icone-de-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "path/para/icone-de-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

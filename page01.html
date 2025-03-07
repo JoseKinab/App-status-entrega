@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f2eff0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <section class="form-info">
+        <di class="loading">
+            <div class="not">
+                <p>Enviando dados</p>
+            </div>
+        </di>
+        <form action="" method="POST"enctype="multipart/form-data">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="data">
+                <label for="data">Data</label>
+                <input type="date" id="data" name="data" value="" required>
+            </div>
+            <label for="nome-motorista">Nome do motorista</label>
+            <input type="text" id="nome-motorista" name="nome-motorista" value="" required>
+            <label for="nome-cliente">Nome do cliente</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" value="" required>
+            <label for="numero-nota">Número da nota</label>
+            <input type="text" id="numero-nota" name="numero-nota" value="" required>
+            <div class="status-entrega">
+                <input type="radio" id="entregue" name="status-entrega" value="entregue"required>
+                <label class="sim-nao" for="entregue">Entregue <img src="img/smile.png" alt="" class="emoji"></label>
+                <input type="radio" id="nao-entregue" name="status-entrega" value="nao-entregue" required>
+                <label class="sim-nao" for="nao-entregue">Não entregue <img src="img/sad.png" alt="" class="emoji"></label>
+            </div>
+            <label id="areaLabel" for="textarea">Observações</label>
+            <textarea id="textarea" name="motivo" placeholder=""></textarea>
+            <input type="file" id="file1" name="file1">
+            <input type="file" id="file2" name="file2">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <script src="./JavaScript/enviarDados.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/compressorjs@1.0.6/dist/compressor.min.js"></script>
+</body>
+</html>
