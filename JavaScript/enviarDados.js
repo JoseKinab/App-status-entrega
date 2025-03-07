@@ -10,7 +10,6 @@ form.addEventListener("submit", async function(e) {
 
   let formData = new FormData();
 
-  // Adiciona todos os campos do formulário ao FormData
   new FormData(form).forEach((value, key) => {
     formData.append(key, value);
   });
@@ -21,7 +20,6 @@ form.addEventListener("submit", async function(e) {
         quality: 0.6,
         maxWidth: 300,
         success(result) {
-          // Converte o arquivo comprimido para base64
           let reader = new FileReader();
           reader.onload = function(event) {
             resolve(event.target.result.split(",")[1]);
