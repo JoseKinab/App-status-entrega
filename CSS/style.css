@@ -1,0 +1,206 @@
+.loading{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.845);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+.loading .not{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.loading .not p{
+    font-size: 33px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.not p::after {
+  content: "...";
+  animation: blink 3s infinite;
+}
+
+  
+  
+.page-inicial{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient( rgb(223, 92, 92) 1%, rgb(242, 239, 240) 25%);
+}
+.page-inicial #logo{
+   width: 175px;
+}
+.page-inicial .ilustração-tela-de-entrada{
+    width: 85%;
+    max-width: 350px;
+}
+.page-inicial .btn-link{
+    width: 85%;
+    max-width: 300px;
+    padding: 7px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgb(216, 213, 213);
+    margin-bottom: 10px;
+}
+.form-info{
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    max-width: 450px;
+    min-height: 103%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-info form{
+    position: relative;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    width: 90%;
+    min-height: 100%;
+    margin-bottom: 5px;
+}
+.form-info form .data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 7px;
+}
+.form-info form .data label{
+    top: 10px;
+    left: 0;
+    width: 55px;
+    text-align: center;
+}
+.form-info form .data input{
+    border: 1px solid black;
+}
+.form-info form label{
+    position: relative;
+    background-color: #f2eff0;
+    top: 15px;
+    left: 20px;
+    width: 165px;
+    text-align: center;
+    font-weight: bold;
+}
+.form-info form input{
+    border: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: transparent;
+    padding: 13px;
+}
+.form-info form #areaLabel{
+    position: relative;
+    background-color: rgb(242, 239, 240);
+    top: 15px;
+    left: 21px;
+    width: 120px;
+    text-align: center;
+}
+.status-entrega{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+}
+.status-entrega .sim-nao{
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    transition: .3s;
+    background-color: rgb(216, 216, 216);
+}
+.status-entrega .sim-nao .emoji{
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    width: 30px;
+}
+
+.status-entrega input[type="radio"] {
+    display: none;
+}
+
+.status-entrega #entregue[type="radio"]:checked + label[for="entregue"] {
+    background-color: rgba(31, 229, 31, 0.713);
+  
+}
+
+.status-entrega [type="radio"]:checked + label[for="nao-entregue"] {
+    background-color: rgba(203, 31, 65, 0.673);
+}
+
+.form-info form textarea{
+    border: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: transparent;
+    padding: 10px;
+    height: 200px;
+    resize: none;
+}
+.form-info form input[type=file]{
+    border: none;
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+}
+.form-info form button{
+    border: none;
+    background-color: rgb(216, 216, 216);
+    padding: 13px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+    color: black !important;
+    font-size: 17px;
+}
+
