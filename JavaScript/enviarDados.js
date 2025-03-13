@@ -53,7 +53,7 @@ form.addEventListener("submit", async function(e) {
     }
   }
 
-  fetch("https://script.google.com/macros/s/AKfycbzeI-qpwJkh5L9Jb10rn6mn78Q6y6kplQH3gFq72EinwPtZU8I0lIUhmzyLg0DgwBhG/exec", {
+  fetch("link da sua planilha do Google sheets", {
     method: "POST",
     body: formData
   }).then(response => response.text()).then(result => {
